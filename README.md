@@ -1,3 +1,19 @@
+## Application Details
+
+1.  This aplication Uses React as frontend framework and Flux(Facebooks's Flux) for state management.
+2.  FLUX is Uni directional that means Data flows in one direction
+    Action -> Dispatcher -> Store -> React -> Action -> ....
+    User perform some action(action is object which consist of actionType and payload)
+    dispatcher checks which stores are registered to a particular action.
+    Store contains Models(Application Data) and the logic to update models. It performs actions to update store's model and emit changes.
+    React Component, who subscribed to change listner of store will get to know about the changed store.
+    Again React component will create action, action will be dispatched to Store, Store will perform action and updates model, store will emit change to let react components know about the change and this cycle continues.
+    From above steps of flux, we can see that data flows uni directionally from Action to Dispatcher to Store to React components.
+
+3.  api folder contains backend code which uses the express framework. We have consumed courseApi for our application.
+    We don't need to focus on api folder implementation as main objective of this project is to understand the React concepts including Flux.
+4.  We have used BrowserRouter for routing, bootstrap for styling and react-toastify for showing notification.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
